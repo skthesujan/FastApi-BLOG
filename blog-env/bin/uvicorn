@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/run/media/sujan/3a5ecf14-88e3-43ab-9736-7bb0f3f94de4/home/skthesujan/SUJAN KHANAL/FASTAPI/blog-env/bin/python3" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from uvicorn.main import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
